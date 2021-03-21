@@ -4,7 +4,7 @@
 enum Color { BLACK, RED };
 
 template < class btElementType >
-class RBT : public BinaryTree < book > {         //bookÀ» btElementType·Î º¯°æÇÒ°æ¿ì ¾ÈµÈ´Ù? 2017 ÄÄÆÄÀÏ·¯ ¿À·ù?
+class RBT : public BinaryTree < book > {         //bookì„ btElementTypeë¡œ ë³€ê²½í• ê²½ìš° ì•ˆëœë‹¤? 2017 ì»´íŒŒì¼ëŸ¬ ì˜¤ë¥˜?
 public:
 	RBT();
 	virtual BinaryTree <btElementType>* insertNode(btElementType & d, BinaryTree *parent_pt);
@@ -44,7 +44,7 @@ RBT < btElementType >
 
 template < class btElementType >
 void
-RBT< btElementType>
+RBT< btElementType >
 ::swap(BinaryTree *a, BinaryTree *b) {
 	bool temp = a->color;
 	a->color = b->color;
@@ -128,7 +128,7 @@ deleteNode(BinaryTree* root, int key)
 			return temp;
 		}
 
-		//Áö¿ì´Â ³ëµå°¡ root°¡ ¾Æ´Ñ °æ¿ì
+		//ì§€ìš°ëŠ” ë…¸ë“œê°€ rootê°€ ì•„ë‹Œ ê²½ìš°
 		if (root->parent != root) {
 			BinaryTree <book> * temp = minValueNode(root->leftTree);
 			book temp2 = temp->getData();
